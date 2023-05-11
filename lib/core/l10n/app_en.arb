@@ -1,0 +1,27 @@
+{
+  "loginScreenMainTitle": "Enter to System",
+  "loginScreenSubTitle": "Enter with your login and password",
+  "loginScreenLoginPlaceholder": "Login",
+  "loginScreenPasswordPlaceholder": "Password",
+  "loginScreenEnterBtn": "Enter",
+
+  "homeScreenMainTitle": "Home",
+
+  "scheduleScreenMainTitle": "Schedule",
+  "scheduleScreenTableGroup": "Group",
+  "scheduleScreenTableTeacher": "Teacher",
+  "scheduleScreenTableDay": "Lessons day",
+  "scheduleScreenTableTime": "Lessons time",
+  "scheduleScreenTableClassroom": "Classrom",
+
+  "attendanceScreenMainTitle": "Attendance",
+
+  "groupsScreenMainTitle": "Groups",
+
+  "studentsScreenMainTitle": "Students",
+
+  "profileScreenMainTitle": "Profile",
+  "profileScreenLoginFormTitle": "Login",
+  "profileScreenNameFormTitle": "Name",
+  "profileScreenPhoneFormTitle": "Phone"
+}

@@ -1,0 +1,27 @@
+{
+  "loginScreenMainTitle": "Вход в систему",
+  "loginScreenSubTitle": "Войдите используя пароль и логин",
+  "loginScreenLoginPlaceholder": "Логин",
+  "loginScreenPasswordPlaceholder": "Пароль",
+  "loginScreenEnterBtn": "Войти",
+
+  "homeScreenMainTitle": "Главная",
+
+  "scheduleScreenMainTitle": "Расписание",
+  "scheduleScreenTableGroup": "Группа",
+  "scheduleScreenTableTeacher": "Преподаватель",
+  "scheduleScreenTableDay": "День занятий",
+  "scheduleScreenTableTime": "Время занятий",
+  "scheduleScreenTableClassroom": "Аудитория",
+
+  "attendanceScreenMainTitle": "Журнал",
+
+  "groupsScreenMainTitle": "Группы",
+
+  "studentsScreenMainTitle": "Ученики",
+
+  "profileScreenMainTitle": "Профиль",
+  "profileScreenLoginFormTitle": "Логин",
+  "profileScreenNameFormTitle": "Имя",
+  "profileScreenPhoneFormTitle": "Телефон"
+}
