@@ -18,7 +18,7 @@ jobs:
         with:
           channel: 'stable'
 
-      - run: dart format --set-exit-if-changed --line-length 80 .
+      - run: dart format --set-exit-if-changed --line-length 120 .
 
       - run: flutter analyze --no-fatal-infos
 
