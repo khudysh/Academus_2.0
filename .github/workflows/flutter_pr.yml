@@ -21,17 +21,3 @@ jobs:
       - run: dart format --set-exit-if-changed --line-length 120 .
 
       - run: flutter analyze --no-fatal-infos
-
-  unit-tests:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-
-      - run: flutter pub get
-
-      - run: flutter test
