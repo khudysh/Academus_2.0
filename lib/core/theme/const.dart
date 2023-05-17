@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Const {
-  static const primaryColor = Color(0xFF1982C4);
+  static const primaryColor = Color(0xFF5570F1);
   static const backgroundColor = Color(0xFFF8F9FA);
-  static const secondaryColor = Color(0xFF758BFD);
+  static const secondaryColor = Color(0xFFFFCC91);
   static const tertiaryColor = Color(0xFF000000);
   static const inactiveColor = Color(0xFF8D8D8D);
   static const formColor = Color(0xFF6750A4);
@@ -12,9 +12,9 @@ class Const {
   static const mediumColor = Color(0xFFFFCA3A);
   static const badColor = Color(0xFFFF595E);
 
-  static const darkPrimaryColor = Color(0xFF1982C4);
+  static const darkPrimaryColor = Color(0xFF5570F1);
   static const darkBackgroundColor = Color(0xFF292929);
-  static const darkSecondaryColor = Color(0xFF758BFD);
+  static const darkSecondaryColor = Color(0xFFFFCC91);
   static const darkTertiaryColor = Color(0xFF000000);
   static const darkInactiveColor = Color(0xFF8D8D8D);
   static const darkFormColor = Color(0xFF6750A4);
