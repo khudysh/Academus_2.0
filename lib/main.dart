@@ -1,23 +1,31 @@
+import 'package:academus_2/core/domain/providers/app_locator.dart';
+import 'package:academus_2/core/domain/providers/service_locator.dart';
 import 'package:academus_2/core/l10n/all_locales.dart';
+import 'package:academus_2/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final ServiceLocator serviceLocator = AppLocator();
 
 void main() {
-  runApp(const MyApp());
+  serviceLocator.init();
+  runApp(const ProviderScope(
+    child: App(),
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends ConsumerWidget {
+  const App({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(serviceLocator.settingsProvider);
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      locale: AppLocalizations.supportedLocales.first,
+      theme: state.theme,
+      locale: state.locale,
       supportedLocales: AllLocale.all,
       localizationsDelegates: const [
         AppLocalizations.delegate,
@@ -25,34 +33,20 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+class MyHomePage extends ConsumerWidget {
+  const MyHomePage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final settingsProvider = ref.watch(serviceLocator.settingsProvider);
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('widget.title'),
       ),
       body: Center(
         child: Column(
@@ -62,17 +56,37 @@ class _MyHomePageState extends State<MyHomePage> {
               AppLocalizations.of(context).homeScreenMainTitle,
             ),
             Text(
-              '$_counter',
+              '_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Placeholder(),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          FloatingActionButton(
+            onPressed: () => {
+              ref
+                  .read(serviceLocator.settingsProvider.notifier)
+                  .changeLocale(settingsProvider.locale),
+            },
+            tooltip: 'Increment',
+            child: const Placeholder(),
+          ),
+          FloatingActionButton(
+            onPressed: () => {
+              ref
+                  .read(serviceLocator.settingsProvider.notifier)
+                  .changeTheme(settingsProvider.theme),
+            },
+            tooltip: 'Increment',
+            child: const Placeholder(),
+          ),
+        ],
+      ),
+
     );
   }
 }
