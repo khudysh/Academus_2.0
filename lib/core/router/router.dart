@@ -1,16 +1,6 @@
 import 'package:academus_2/core/router/routes.dart';
-import 'package:academus_2/features/accounting/ui/accounting_screen.dart';
-import 'package:academus_2/features/attendance/ui/attendance_screen.dart';
-import 'package:academus_2/features/auth/ui/auth_screen.dart';
-import 'package:academus_2/features/dashboard/ui/dashboard_screen.dart';
-import 'package:academus_2/features/groups/ui/groups_screen.dart';
-import 'package:academus_2/features/homework/ui/homework_screen.dart';
-import 'package:academus_2/features/profile/ui/profile_screen.dart';
-import 'package:academus_2/features/schedule/ui/schedule_screen.dart';
-import 'package:academus_2/features/students/ui/students_screen.dart';
-import 'package:academus_2/features/team/ui/team_screen.dart';
-import 'package:academus_2/main.dart';
 import 'package:go_router/go_router.dart';
+import 'package:academus_2/core/router/screens.dart';
 
 class AppRouter {
   static final router = GoRouter(
