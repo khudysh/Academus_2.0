@@ -1,18 +1,16 @@
 import 'package:academus_2/core/domain/providers/app_locator.dart';
 import 'package:academus_2/core/domain/providers/service_locator.dart';
 import 'package:academus_2/core/l10n/all_locales.dart';
-import 'package:academus_2/core/router/router.dart';
 import 'package:academus_2/core/router/routes.dart';
-import 'package:academus_2/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 
 final ServiceLocator serviceLocator = AppLocator();
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   serviceLocator.init();
   runApp(const ProviderScope(
     child: App(),
