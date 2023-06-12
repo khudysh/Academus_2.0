@@ -14,45 +14,17 @@ class TeamScreen extends ConsumerWidget {
         ref.watch(serviceLocator.settingsProvider.notifier);
     final routerProvider = ref.watch(serviceLocator.routerProvider);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('widget.title'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-                onPressed: () =>
-                    {routerProvider.goNamed(AppRoutes.splash.name)},
-                child: Text("ggg")),
-            Text(
-              AppLocalizations.of(context).homeScreenMainTitle,
-            ),
-          ],
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        ElevatedButton(
+            onPressed: () =>
+                {routerProvider.goNamed(AppRoutes.splash.name)},
+            child: Text("ggg")),
+        Text(
+          AppLocalizations.of(context).homeScreenMainTitle,
         ),
-      ),
-      floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          FloatingActionButton(
-            heroTag: null,
-            onPressed: () => {
-              settingsNotifier.changeLocale(),
-            },
-            tooltip: 'Increment',
-            child: const Placeholder(),
-          ),
-          FloatingActionButton(
-            heroTag: null,
-            onPressed: () => {
-              settingsNotifier.changeTheme(),
-            },
-            tooltip: 'Increment',
-            child: const Placeholder(),
-          ),
-        ],
-      ),
+      ],
     );
   }
 }

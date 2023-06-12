@@ -1,17 +1,27 @@
 enum AppRoutes {
-  splash('splash'),
-  auth('auth'),
   dashboard('dashboard'),
   schedule('schedule'),
   attendance('attendance'),
   groups('groups'),
-  homework('homework'),
   students('students'),
-  team('team'),
+  tasks('tasks'),
+  homework('homework'),
   accounting('accounting'),
-  profile('profile');
+  profile('profile'),
+  splash('splash'),
+  auth('auth');
+
 
   final String routeName;
 
   const AppRoutes(this.routeName);
-}
+
+  static AppRoutes routeByIndex(selectedIndex) {
+    return (AppRoutes.values.elementAt(selectedIndex));
+  }
+
+  static int routeByName(routeName) {
+    return AppRoutes.values.indexWhere((element) => element.name == routeName);
+
+  }
+ }

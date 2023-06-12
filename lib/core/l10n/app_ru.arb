@@ -20,6 +20,12 @@
 
   "studentsScreenMainTitle": "Ученики",
 
+  "tasksScreenMainTitle": "Задачи",
+
+  "homeworksScreenMainTitle": "Домашняя работа",
+
+  "reportsScreenMainTitle": "Отчёты",
+
   "profileScreenMainTitle": "Профиль",
   "profileScreenLoginFormTitle": "Логин",
   "profileScreenNameFormTitle": "Имя",

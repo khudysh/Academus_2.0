@@ -20,6 +20,12 @@
 
   "studentsScreenMainTitle": "Students",
 
+  "tasksScreenMainTitle": "Tasks",
+
+  "homeworksScreenMainTitle": "Homeworks",
+
+  "reportsScreenMainTitle": "Reports",
+
   "profileScreenMainTitle": "Profile",
   "profileScreenLoginFormTitle": "Login",
   "profileScreenNameFormTitle": "Name",

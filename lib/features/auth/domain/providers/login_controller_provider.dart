@@ -5,12 +5,14 @@ class LoginController extends StateNotifier<AuthState> {
   LoginController(this.ref) : super(const AuthStateInitial());
 
   final Ref ref;
+  // ! Cringe code
+  ProviderListenable? get authRepositoryProvider => null;
 
   void login(String email, String password) async {
     state = const AuthStateLoading();
 
     try {
-      await ref.read(authRepositoryProvider).login(email, password);
+      await ref.read(authRepositoryProvider!).login(email, password);
       state = const AuthStateSuccess();
     } catch (e) {
       state = AuthStateError(e.toString());

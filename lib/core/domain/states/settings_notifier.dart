@@ -13,13 +13,13 @@ class SettingsStateNotifier extends StateNotifier<SettingsState> {
           state.theme,
           state.locale == AppLocalizations.supportedLocales[0]
               ? AppLocalizations.supportedLocales[1]
-              : AppLocalizations.supportedLocales[0]);
+              : AppLocalizations.supportedLocales[0], state.expandMenu);
     } else {
       state = SettingsState(
           state.theme,
           locale == AppLocalizations.supportedLocales[0]
               ? AppLocalizations.supportedLocales[1]
-              : AppLocalizations.supportedLocales[0]);
+              : AppLocalizations.supportedLocales[0], state.expandMenu);
     }
   }
 
@@ -29,13 +29,18 @@ class SettingsStateNotifier extends StateNotifier<SettingsState> {
           state.theme == AppThemes.darkTheme
               ? AppThemes.lightTheme
               : AppThemes.darkTheme,
-          state.locale);
+          state.locale, state.expandMenu);
     } else {
       state = SettingsState(
           theme == AppThemes.darkTheme
               ? AppThemes.lightTheme
               : AppThemes.darkTheme,
-          state.locale);
+          state.locale, state.expandMenu);
     }
+  }
+
+  void changeExpandMenu() {
+    state = SettingsState(
+        state.theme, state.locale, state.expandMenu ? false : true);
   }
 }

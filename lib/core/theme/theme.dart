@@ -1,3 +1,6 @@
+import 'package:academus_2/core/theme/widgets_theme/app_bar.dart';
+import 'package:academus_2/core/theme/widgets_theme/elevated_buttons.dart';
+import 'package:academus_2/core/theme/widgets_theme/text_field.dart';
 import 'package:flutter/material.dart';
 
 import 'package:academus_2/core/theme/const.dart';
@@ -20,17 +23,21 @@ class AppThemes {
       onTertiary: Const.backgroundColor,
       brightness: Brightness.light,
     ),
+      appBarTheme: AppBarThemes.light,
+      inputDecorationTheme: TextFieldThemes.light,
+
+      elevatedButtonTheme: ElevatedButtonThemes.light
   );
 
   static final darkTheme = ThemeData(
-    hintColor: Const.inactiveColor,
+    hintColor: Const.darkInactiveColor,
     colorScheme: const ColorScheme(
       background: Const.darkBackgroundColor,
       onBackground: Const.darkTertiaryColor,
       error: Const.darkFormErrorColor,
-      onError: Const.backgroundColor,
+      onError: Const.darkBackgroundColor,
       primary: Const.darkPrimaryColor,
-      onPrimary: Const.tertiaryColor,
+      onPrimary: Const.darkTertiaryColor,
       secondary: Const.darkSecondaryColor,
       onSecondary: Const.darkBackgroundColor,
       surface: Const.darkBackgroundColor,
@@ -39,5 +46,8 @@ class AppThemes {
       onTertiary: Const.darkBackgroundColor,
       brightness: Brightness.dark,
     ),
+      inputDecorationTheme: TextFieldThemes.dark,
+      appBarTheme: AppBarThemes.dark,
+      elevatedButtonTheme: ElevatedButtonThemes.dark
   );
 }
