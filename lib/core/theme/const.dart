@@ -6,26 +6,26 @@ class Const {
   static const secondaryColor = Color(0xFFFFCC91);
   static const tertiaryColor = Color(0xFF000000);
   static const inactiveColor = Color(0xFF8D8D8D);
-  static const formColor = Color(0xFF6750A4);
+  static const formColor = Color(0xFFEFF1F9);
   static const formErrorColor = Color(0xFFB3261E);
-  static const goodColor = Color(0xFF8D8D8D);
+  static const goodColor = Color(0xFF8AC926);
   static const mediumColor = Color(0xFFFFCA3A);
   static const badColor = Color(0xFFFF595E);
 
   static const darkPrimaryColor = Color(0xFF5570F1);
   static const darkBackgroundColor = Color(0xFF292929);
   static const darkSecondaryColor = Color(0xFFFFCC91);
-  static const darkTertiaryColor = Color(0xFF000000);
+  static const darkTertiaryColor = Color(0xFFF8F9FA);
   static const darkInactiveColor = Color(0xFF8D8D8D);
-  static const darkFormColor = Color(0xFF6750A4);
+  static const darkFormColor = Color(0xFFEFF1F9);
   static const darkFormErrorColor = Color(0xFFB3261E);
-  static const darkGoodColor = Color(0xFF8D8D8D);
+  static const darkGoodColor = Color(0xFF8AC926);
   static const darkMediumColor = Color(0xFFFFCA3A);
   static const darkBadColor = Color(0xFFFF595E);
 
   static const borderRadiusSmall = Radius.circular(4);
   static const borderRadiusStandart = Radius.circular(8);
-  static const borderRadiusLarge = Radius.circular(16);
+  static const borderRadiusLarge = Radius.circular(12);
 
   static const paddingBetweenSmall = 8.0;
   static const paddingBetweenStandart = 16.0;

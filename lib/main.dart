@@ -6,10 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 final ServiceLocator serviceLocator = AppLocator();
 
 void main() {
+  usePathUrlStrategy();
   WidgetsFlutterBinding.ensureInitialized();
   serviceLocator.init();
   runApp(const ProviderScope(
@@ -49,7 +51,7 @@ class MyHomePage extends ConsumerWidget {
     final routerProvider = ref.watch(serviceLocator.routerProvider);
     return Scaffold(
       appBar: AppBar(
-        title: Text('widget.title'),
+        title: Text('widget.title') ,
       ),
       body: Center(
         child: Column(
@@ -69,7 +71,7 @@ class MyHomePage extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FloatingActionButton(
-            onPressed: () => {routerProvider.goNamed(AppRoutes.team.name)},
+            onPressed: () => {routerProvider.goNamed(AppRoutes.auth.name)},
             tooltip: 'Increment',
             child: const Placeholder(),
           ),

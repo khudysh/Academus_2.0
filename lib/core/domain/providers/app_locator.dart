@@ -30,7 +30,7 @@ class AppLocator implements ServiceLocator {
     settingsProvider =
         StateNotifierProvider<SettingsStateNotifier, SettingsState>((ref) {
       return SettingsStateNotifier(SettingsState(
-          AppThemes.darkTheme, AppLocalizations.supportedLocales[0]));
+          AppThemes.lightTheme, AppLocalizations.supportedLocales[1], false));
     });
   }
 
