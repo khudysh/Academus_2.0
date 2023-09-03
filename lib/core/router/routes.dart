@@ -16,11 +16,11 @@ enum AppRoutes {
 
   const AppRoutes(this.routeName);
 
-  static AppRoutes routeByIndex(selectedIndex) {
+  static AppRoutes routeByIndex(int selectedIndex) {
     return (AppRoutes.values.elementAt(selectedIndex));
   }
 
-  static int routeByName(routeName) {
+  static int routeByName(String routeName) {
     return AppRoutes.values.indexWhere((element) => element.name == routeName);
 
   }

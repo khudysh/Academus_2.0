@@ -1,5 +1,5 @@
 import 'package:academus_2/core/router/routes.dart';
-import 'package:academus_2/core/ui/widgets/navigation.dart';
+import 'package:academus_2/core/ui/widgets/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:academus_2/core/router/screens.dart';
@@ -18,29 +18,33 @@ class AppRouter {
     ),
     ShellRoute(
       builder: (context, GoRouterState state, child) {
-        return  Row(children: <Widget>[
-                Navigation(name: state.location,),
-                const VerticalDivider(thickness: 1, width: 1),
-                Expanded(
-                    child: Scaffold(
-        appBar: AppBar(title: Text(state.location)),
-        body: SafeArea(
-        child: Center(
-        child: child),            ),
-        ),
+        return Row(
+          children: <Widget>[
+            Navigation(
+              name: state.location,
+            ),
+            Expanded(
+              child: Scaffold(
+                appBar: AppBar(
+                  title: Text(state.location),
+                  backgroundColor: Colors.white,
+                ),
+                body: SafeArea(
+                  child: Center(child: child),
+                ),
               ),
-        ],
+            ),
+          ],
         );
       },
       routes: [
         GoRoute(
-          path: '/${AppRoutes.dashboard.name}',
-          name: AppRoutes.dashboard.name,
-          builder: (context, state) {
-            final testId = state.params['testId'] ?? 'Not';
-            return const DashboardScreen();
-          }
-        ),
+            path: '/${AppRoutes.dashboard.name}',
+            name: AppRoutes.dashboard.name,
+            builder: (context, state) {
+              final testId = state.params['testId'] ?? 'Not';
+              return const DashboardScreen();
+            }),
         GoRoute(
           path: '/${AppRoutes.schedule.name}',
           name: AppRoutes.schedule.name,

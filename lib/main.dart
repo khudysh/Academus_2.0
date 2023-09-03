@@ -51,7 +51,7 @@ class MyHomePage extends ConsumerWidget {
     final routerProvider = ref.watch(serviceLocator.routerProvider);
     return Scaffold(
       appBar: AppBar(
-        title: Text('widget.title') ,
+        title: Text('widget.title'),
       ),
       body: Center(
         child: Column(
